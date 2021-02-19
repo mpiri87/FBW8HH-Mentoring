@@ -48,7 +48,7 @@ const commentsArr = [
 ];
 
 app.get("/blog", (req, res) => {
-  res.render("blog");
+  res.render("blog", { commentsArr });
 });
 
 app.get("/contact", (req, res) => {
