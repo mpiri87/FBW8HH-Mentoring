@@ -12,6 +12,10 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html"); //__dirname= absolute path
 });
 
+app.get("/about", (req, res) => {
+  res.sendFile(__dirname + "/views/about.html");
+});
+
 app.listen(port, () => {
   console.log(`App is running on port ${port}`); // this way with backticks is called string incection
 });
