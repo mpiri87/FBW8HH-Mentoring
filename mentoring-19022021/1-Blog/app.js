@@ -27,6 +27,26 @@ app.get("/marketing", (req, res) => {
   res.render("marketing");
 });
 
+// create a comments array to safe the comments inside
+
+const commentsArr = [
+  {
+    name: "Ahmad",
+    commentDate: new Date("18.02.2021"),
+    comment: "Hello this is my first comment!",
+  },
+  {
+    name: "Basem",
+    commentDate: new Date("17.02.2021"),
+    comment: "Hello tmy name is Basem",
+  },
+  {
+    name: "MEMO",
+    commentDate: new Date("16.02.2021"),
+    comment: "Hello my name is memo",
+  },
+];
+
 app.get("/blog", (req, res) => {
   res.render("blog");
 });
