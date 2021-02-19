@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.port || 3000; // first get the port from the computer or 3000
 
 app.get("/", (req, res) => {
-  res.send("Hello");
+  res.sendFile(__dirname + "/views/index.html");
 });
 
 app.listen(port, () => {
