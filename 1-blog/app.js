@@ -30,17 +30,17 @@ app.get('/about', (req, res) => {
 const commentsArr = [
     {
         name: "Ahmad",
-        commentDate: new Date("18.02.2021"),
+        commentDate: new Date(2021, 2, 17, 10),
         comment: "Hello this is my first comment"
     },
     {
         name: "Basem",
-        commentDate: new Date("17.02.2021"),
+        commentDate: new Date(2021, 2, 16, 10),
         comment: "Hello I am Basem"
     },
     {
         name: "Nisreen",
-        commentDate: new Date("16.02.2021"),
+        commentDate: new Date(2021, 2, 13, 10),
         comment: "I liked this blog"
     }
 ];
