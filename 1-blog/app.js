@@ -49,7 +49,7 @@ const commentsArr = [
 app.get('/blog', (req, res) => {
     // console.log(__dirname);
     // res.sendFile( __dirname +  '/views/about.html');
-    res.render('blog');
+    res.render('blog', {commentsArr});
 })
 
 app.get('/contact', (req, res) => {
