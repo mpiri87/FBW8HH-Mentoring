@@ -4,8 +4,12 @@ const app = express();
 
 const port = process.env.port || 3000; // first get the port from the computer or 3000
 
+// make any file inside public folder accessable without creating routes for each file
+
+app.use(express.static(__dirname + "/public")); // only this line to see all dependencise
+
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html");
+  res.sendFile(__dirname + "/views/index.html"); //__dirname= absolute path
 });
 
 app.listen(port, () => {
