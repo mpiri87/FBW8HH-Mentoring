@@ -8,12 +8,19 @@ const port = process.env.port || 3000; // first get the port from the computer o
 
 app.use(express.static(__dirname + "/public")); // only this line to see all dependencise
 
+//set ejs as a view engine
+app.set("view engine", "ejs");
+//set the views folder
+app.set("views", __dirname + "/views");
+
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html"); //__dirname= absolute path
+  // res.sendFile(__dirname + "/views/index.html"); //__dirname= absolute path
+  res.render("index");
 });
 
 app.get("/about", (req, res) => {
-  res.sendFile(__dirname + "/views/about.html");
+  // res.sendFile(__dirname + "/views/about.html");
+  res.render("about");
 });
 
 app.listen(port, () => {
