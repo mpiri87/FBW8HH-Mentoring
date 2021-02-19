@@ -23,6 +23,18 @@ app.get("/about", (req, res) => {
   res.render("about");
 });
 
+app.get("/marketing", (req, res) => {
+  res.render("marketing");
+});
+
+app.get("/blog", (req, res) => {
+  res.render("blog");
+});
+
+app.get("/contact", (req, res) => {
+  res.render("contact");
+});
+
 app.listen(port, () => {
   console.log(`App is running on port ${port}`); // this way with backticks is called string incection
 });
