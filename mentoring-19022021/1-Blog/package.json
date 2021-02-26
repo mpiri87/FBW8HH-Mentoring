@@ -1,5 +1,5 @@
 {
-  "name": "1-blog",
+  "name": "1-Blog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
+<<<<<<< HEAD:1-blog/package.json
     "express": "^4.17.1",
     "mongodb": "^3.6.4"
+=======
+    "express": "^4.17.1"
+>>>>>>> b30b57a8d30cf68ed52bb5864f5157d9fbbaf8c1:mentoring-19022021/1-Blog/package.json
   }
 }
