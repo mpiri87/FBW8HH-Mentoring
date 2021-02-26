@@ -63,6 +63,11 @@ app.post('/blog', (req, res) => {
     console.log(req.body);
 // push new data to commentsArr
 
+commentsArr.push({
+    name: req.body.name,
+    commentDate: new Date(),
+    comment: req.body.comment
+});
 
 
 
