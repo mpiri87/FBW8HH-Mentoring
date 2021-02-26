@@ -8,6 +8,11 @@ const port = process.env.PORT || 3000;
 // make any file inside public folder accessable without creating routes for each file
 app.use(express.static(__dirname + '/public'));
 
+// set middleware to be able to get POSTED data
+// If extended is false, you can not post "nested object"
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+
 // set ejs as a view engine
 app.set('view engine', 'ejs');
 // set the views folder
@@ -35,20 +40,32 @@ const commentsArr = [
     },
     {
         name: "Basem",
-        commentDate: new Date(2021, 2, 16, 10),
+        commentDate: new Date(2021, 2, 16, 9),
         comment: "Hello I am Basem"
     },
     {
         name: "Nisreen",
-        commentDate: new Date(2021, 2, 13, 10),
+        commentDate: new Date(2021, 2, 13, 8),
         comment: "I liked this blog"
     }
 ];
+
+//Date.now();
 
 
 app.get('/blog', (req, res) => {
     // console.log(__dirname);
     // res.sendFile( __dirname +  '/views/about.html');
+    res.render('blog', {commentsArr});
+});
+
+app.post('/blog', (req, res) => {
+    console.log(req.body);
+// push new data to commentsArr
+
+
+
+
     res.render('blog', {commentsArr});
 })
 
